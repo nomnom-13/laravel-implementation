@@ -9,7 +9,7 @@
                 <div class="text">
                     <h2>{{ Str::ucfirst($details->firstName) }} {{ Str::ucfirst($details->lastName) }}</h2>
                     <hr>
-                    <p>Bachelor of Science in Information Technology Student</p>
+                    <p>{{ $details->course }} Student</p>
                 </div>
 
                 <div class="info">
