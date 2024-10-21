@@ -55,7 +55,7 @@
                         <span>:</span>
                         <h4>{{ Str::ucfirst($details->college) }}</h4>
                         <span>-</span>
-                        <h4>A.Y. 2021-Present</h4>
+                        <h4>A.Y. {{ $details->collegeAcadYear }}</h4>
                     </div>
                 </div>
                 <div class="shs educ-container">
@@ -64,7 +64,7 @@
                         <span>:</span>
                         <h4>{{ Str::ucfirst($details->shs) }}</h4>
                         <span>-</span>
-                        <h4>A.Y. 2016-2018</h4>
+                        <h4>A.Y. {{ $details->shsAcadYear }}</h4>
                     </div>
                 </div>
                 <div class="jhs educ-container">
@@ -73,7 +73,7 @@
                         <span>:</span>
                         <h4>{{ Str::ucfirst($details->jhs) }}</h4>
                         <span>-</span>
-                        <h4>A.Y. 2012-2016</h4>
+                        <h4>A.Y. {{ $details->jhsAcadYear }}</h4>
                     </div>
                 </div>
                 <div class="elem educ-container">
@@ -82,7 +82,7 @@
                         <span>:</span>
                         <h4>{{ Str::ucfirst($details->elem) }}</h4>
                         <span>-</span>
-                        <h4>A.Y. 2006-2012</h4>
+                        <h4>A.Y. {{ $details->elemAcadYear }}</h4>
                     </div>
                 </div>
             </div>
@@ -100,21 +100,21 @@
                         <i class='bx bx-joystick'></i>
                     </div>
                     <hr>
-                    <h2>{{ Str::ucfirst($details->hobby_1) }}</h2>
+                    <h2>{{ Str::ucfirst($hobbies[0]->hobby) }}</h2>
                 </div>
                 <div class="read">
                     <div class="img-holder">
                         <i class='bx bx-book-reader'></i>
                     </div>
                     <hr>
-                    <h2>{{ Str::ucfirst($details->hobby_2) }}</h2>
+                    <h2>{{ Str::ucfirst($hobbies[1]->hobby) }}</h2>
                 </div>
                 <div class="watch">
                     <div class="img-holder">
                         <i class='bx bx-desktop'></i>
                     </div>
                     <hr>
-                    <h2>{{ Str::ucfirst($details->hobby_3) }}</h2>
+                    <h2>{{ Str::ucfirst($hobbies[2]->hobby) }}</h2>
                 </div>
             </div>
         </div>
@@ -127,13 +127,13 @@
             </div>
             <div class="social-media">
                 <div class="links">
-                    <a href="https://www.facebook.com/raymondsantos.13" target="_blank">
+                    <a href="{{ $links->fbLink }}" target="_blank">
                         <i class='bx bxl-facebook-circle'></i>
                     </a>
-                    <a href="https://www.instagram.com/ar_ey_es_13/" target="_blank">
+                    <a href="{{ $links->igLink }}" target="_blank">
                         <i class='bx bxl-instagram'></i>
                     </a>
-                    <a href="https://github.com/santos-raymond" target="_blank">
+                    <a href="{{ $links->githubLink }}" target="_blank">
                         <i class='bx bxl-github'></i>
                     </a>
                 </div>
