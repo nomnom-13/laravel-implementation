@@ -7,7 +7,7 @@
             </div>
             <div class="text-holder">
                 <div class="text">
-                    <h2>Raymond Santos</h2>
+                    <h2>{{ Str::ucfirst($details->firstName) }} {{ Str::ucfirst($details->lastName) }}</h2>
                     <hr>
                     <p>Bachelor of Science in Information Technology Student</p>
                 </div>
@@ -30,12 +30,12 @@
                         <p>:</p>
                     </div>
                     <div class="info-txt">
-                        <p>Cenon Perez St. Bonga Menor, Bustos, Bulacan</p>
-                        <p>April 13, 2000</p>
-                        <p>24</p>
-                        <p>Single</p>
-                        <p>Male</p>
-                        <p>Filipino</p>
+                        <p>{{ Str::ucfirst($details->address) }}</p>
+                        <p>{{ $details->birthday }}</p>
+                        <p>{{ $details->age }}</p>
+                        <p>{{ Str::ucfirst($details->status) }}</p>
+                        <p>{{ Str::ucfirst($details->sex) }}</p>
+                        <p>{{ Str::ucfirst($details->nationality) }}</p>
                     </div>
 
                 </div>
@@ -53,7 +53,7 @@
                     <div class="school">
                         <h4>College</h4>
                         <span>:</span>
-                        <h4>Dalubhasaang Politekniko ng Lungsod ng Baliwag</h4>
+                        <h4>{{ Str::ucfirst($details->college) }}</h4>
                         <span>-</span>
                         <h4>A.Y. 2021-Present</h4>
                     </div>
@@ -62,7 +62,7 @@
                     <div class="school">
                         <h4>Senior High School</h4>
                         <span>:</span>
-                        <h4>Dalubhasaang Politekniko ng Lungsod ng Baliwag</h4>
+                        <h4>{{ Str::ucfirst($details->shs) }}</h4>
                         <span>-</span>
                         <h4>A.Y. 2016-2018</h4>
                     </div>
@@ -71,7 +71,7 @@
                     <div class="school">
                         <h4>Junior High School</h4>
                         <span>:</span>
-                        <h4>Tibagan National High School</h4>
+                        <h4>{{ Str::ucfirst($details->jhs) }}</h4>
                         <span>-</span>
                         <h4>A.Y. 2012-2016</h4>
                     </div>
@@ -80,7 +80,7 @@
                     <div class="school">
                         <h4>Elementary</h4>
                         <span>:</span>
-                        <h4>Bonga Menor Elementary School</h4>
+                        <h4>{{ Str::ucfirst($details->elem) }}</h4>
                         <span>-</span>
                         <h4>A.Y. 2006-2012</h4>
                     </div>
@@ -100,21 +100,21 @@
                         <i class='bx bx-joystick'></i>
                     </div>
                     <hr>
-                    <h2>Playing Games</h2>
+                    <h2>{{ Str::ucfirst($details->hobby_1) }}</h2>
                 </div>
                 <div class="read">
                     <div class="img-holder">
                         <i class='bx bx-book-reader'></i>
                     </div>
                     <hr>
-                    <h2>Reading</h2>
+                    <h2>{{ Str::ucfirst($details->hobby_2) }}</h2>
                 </div>
                 <div class="watch">
                     <div class="img-holder">
                         <i class='bx bx-desktop'></i>
                     </div>
                     <hr>
-                    <h2>Watching</h2>
+                    <h2>{{ Str::ucfirst($details->hobby_3) }}</h2>
                 </div>
             </div>
         </div>
