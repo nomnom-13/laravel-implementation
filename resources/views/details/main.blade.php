@@ -31,7 +31,7 @@
                     </div>
                     <div class="info-txt">
                         <p>{{ Str::ucfirst($details->address) }}</p>
-                        <p>{{ $details->birthday }}</p>
+                        <p>{{ date('F j, Y', strtotime($details->birthday))  }}</p>
                         <p>{{ $details->age }}</p>
                         <p>{{ Str::ucfirst($details->status) }}</p>
                         <p>{{ Str::ucfirst($details->sex) }}</p>
